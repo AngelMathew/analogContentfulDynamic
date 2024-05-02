@@ -15,30 +15,13 @@ export default defineConfig(({ mode }) => ({
   // prerender property to configure routes to be rendered at build time.
   plugins: [
     analog({
-      static: true,
+      static:true,
       prerender: {
-        routes: async () => [
+        routes: [
           '/',
-          '/about',
           '/blog',
-          {
-            contentDir: 'src/content/blog',
-            transform: (file: PrerenderContentFile) => {
-              // do not include files marked as draft in frontmatter
-              if (file.attributes?.['draft']) {
-                return false;
-              }
-              // use the slug from frontmatter if defined, otherwise use the files basename
-              const slug = file.attributes?.['slug'] || file.name;
-              return `/blog/${slug}`;
-            },
-
-          },
-        ],
-        sitemap: {
-          host: ' https://662a72e15de2a603cf015a9a--comforting-taiyaki-efdb1f.netlify.app/blog',
-        },
-      },
+        ]
+      }
     }),
   ],
   test: {
