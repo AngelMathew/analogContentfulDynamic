@@ -4,10 +4,10 @@ import { Router } from '@angular/router';
 import { injectLoad } from '@analogjs/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 
-import { load } from './index.server';
+import { load } from './[slug].server';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-page',
   standalone: true,
   imports: [RenderTemplateComponent],
   template: `<app-render-template [components]="pageData()" />`,

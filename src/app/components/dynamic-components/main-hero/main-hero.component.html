@@ -1,0 +1,42 @@
+<div
+  class="relative bg-grey-50 pt-[100px] after:absolute after:bottom-0 after:block after:h-28 after:w-full after:bg-gradient-to-t after:from-grey-50 after:content-['']"
+>
+  <div class="container mx-auto">
+    <div class="relative z-10 lg:w-full lg:max-w-lg xl:max-w-xl">
+      <div
+        class="container mx-auto px-4 py-4 sm:px-6 md:py-4 lg:py-4 lg:pl-6 lg:pr-0"
+      >
+        <div class="sm:text-center lg:text-left">
+          <h1 class="font-times text-4xl text-primary-700 lg:text-5xl">
+            <span class="block font-bold leading-tight xl:inline">
+              {{ heading }}
+            </span>
+          </h1>
+          <p
+            class="mt-4 text-base leading-normal text-primary-700 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0"
+          >
+            {{ summary }}
+          </p>
+
+          <div *ngIf="cta && slug === '/'" class="pb-5 pt-10">
+            <app-cta
+              [url]="cta.url"
+              [text]="cta.text"
+              [hasPrimaryCta]="cta.type"
+              contentType="mainHero"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="heroImage"
+    class="relative z-10 -mt-24 transform overflow-hidden pl-10 lg:absolute lg:inset-y-0 lg:bottom-0 lg:left-auto lg:right-0 lg:-mt-10 lg:w-1/2 lg:pt-24 xl:pl-0"
+  >
+    <app-featured-image
+      [image]="heroImage.image.fields.file.url"
+      [altImage]="heroImageAlt"
+    ></app-featured-image>
+  </div>
+</div>

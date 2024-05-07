@@ -1,20 +1,24 @@
 import { NgModuleRef, Type } from '@angular/core';
 
-export type ComponentData = ComponentTemplate[]|ComponentTemplate
+export type ComponentData = {
+  children?: ComponentTemplate[];
+} & Partial<{
+  [key: string]: any;
+}>;
 
 export interface ComponentTemplate {
-  id:number,
   name: string;
   componentData: ComponentData;
 }
+
 export type DynamicComponent = {
   componentDataResolver: (data: ComponentData) => any;
 };
 
 export type DynamicModule = {
   entry: Type<any>;
-  componentDataResolver: (data: ComponentData) => any;
-};
+} & DynamicComponent;
+
 export type DynamicComponentConstructor = Type<DynamicComponent>;
 export type DynamicModuleConstructor = Type<DynamicModule>;
 
@@ -54,8 +58,3 @@ export interface LoadedRenderItems {
   renderItemRef: LoadedRenderItem;
   componentTemplate: ComponentTemplate;
 }
-
-// export interface LoadedComponentModules {
-//   moduleRef: NgModuleRef<DynamicModule>;
-//   componentTemplate: ComponentTemplate;
-// }

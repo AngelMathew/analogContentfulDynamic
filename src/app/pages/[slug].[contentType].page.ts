@@ -4,18 +4,16 @@ import { Router } from '@angular/router';
 import { injectLoad } from '@analogjs/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 
-import { load } from './index.server';
+import { load } from './[slug].[contentType].server';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-pagegh',
   standalone: true,
   imports: [RenderTemplateComponent],
   template: `<app-render-template [components]="pageData()" />`,
 })
-export default class HomeComponent {
+export default class HomeDComponent {
   private readonly route = inject(Router);
-
-  readonly slug = this.route.url;
 
   pageData = toSignal(injectLoad<typeof load>(), { requireSync: true });
 

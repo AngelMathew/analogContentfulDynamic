@@ -1,3 +1,4 @@
+import { Environment } from '@angular/compiler-cli/src/ngtsc/typecheck/src/environment';
 import * as contentful from 'contentful';
 
 const createClient = contentful.createClient
@@ -5,22 +6,24 @@ const createClient = contentful.createClient
   : (contentful as any).default.createClient;
 
 const client = createClient({
-  space: 'bk8otr7phnfm',
-  accessToken: 'NDf_OoMjD1VJo0siqo5Xy3jJy1pWCYLJgH089z7jt34',
+  space: process.env['SPACE'],
+  accessToken: process.env['ACCESS_TOKEN'],
   environment: 'master',
 });
 
-export const getPageBySlug = (slug: string) =>
-  client.getEntries({
+export const getPageBySlug = (slug: string,content_type='page') =>{
+
+  return client.getEntries({
     include: 2,
-    content_type: 'page',
+    content_type,
     'fields.slug': slug,
   });
+}
 
-export const getNavigation = () =>
+export const getHeader = () =>
   client.getEntries({
     include: 2,
-    content_type: 'navigation',
+    content_type: 'header',
   });
 
 export const getFooter = () =>
@@ -30,7 +33,12 @@ export const getFooter = () =>
   });
 
 export const transformContentfulData = (pageData: any) => {
-  const components = pageData.items[0]?.fields.sections || [pageData.items[0]];
+  if(!pageData.items[0]){
+    return [{
+      name: 'pageNotFound'
+    }];
+  }
+  const components = pageData.items[0]?.fields?.sections || [pageData.items[0]];
 
   return components.map((section: any) => {
     const componentData: any = {};
