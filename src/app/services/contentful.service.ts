@@ -1,4 +1,3 @@
-import { Environment } from '@angular/compiler-cli/src/ngtsc/typecheck/src/environment';
 import * as contentful from 'contentful';
 
 const createClient = contentful.createClient

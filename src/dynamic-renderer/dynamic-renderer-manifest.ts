@@ -13,7 +13,7 @@ type ComponentMap = {
 };
 
 export const _dynamicComponentMap: ComponentMap = {
-  // #6 component manifest object
+
   mainHero: {
     loadComponent: () => MainHeroComponent,
   },

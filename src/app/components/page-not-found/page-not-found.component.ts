@@ -6,7 +6,8 @@ import { ComponentData, DynamicComponent } from 'src/types/render-template.types
   selector: 'app-page-not-found',
   imports: [CommonModule],
   standalone: true,
-  template: `<div class="text-center m-auto"><h2 >Page Not Found</h2><a href='/'>Go Back</a></div>`,
+  template: `<div class="text-center m-auto full-height mt-6"><h2 >Page Not Found</h2><a href='/'>Go Back</a></div>`,
+  styles:[`.full-height{height:100vh}`]
 })
 export class PageNotFoundComponent implements DynamicComponent {
 

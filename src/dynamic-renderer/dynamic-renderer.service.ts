@@ -43,6 +43,7 @@ export class DynamicComponentsService {
     }
   }
 
+  // create the components and attach them to the view container.
   createComponent(
     container: ViewContainerRef,
     componentTemplate: ComponentTemplate,
