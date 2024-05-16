@@ -1,4 +1,4 @@
-# Analog App
+# Analog App + Contentful
 
 This project was generated with [Analog](https://analogjs.org), the fullstack meta-framework for Angular.
 Using this app we can dynamically specify what components to render based on data from Contentful.
