@@ -8,7 +8,7 @@ Using this app we can dynamically specify what components to render based on dat
 3. Build components in FE to display the content.
 
    ![Screenshot 2024-05-16 at 12 31 50 PM](https://github.com/AngelMathew/analogContentfulDynamic/assets/30999892/fbd4d206-4526-4f8f-8823-d14a487a110f)
-   ![Contentful]https://github.com/AngelMathew/analogContentfulDynamic/assets/30999892/56441482-13a0-4ace-9440-5c8b1ad6deed)
+   ![Contentful](https://github.com/AngelMathew/analogContentfulDynamic/assets/30999892/56441482-13a0-4ace-9440-5c8b1ad6deed)
 
 
 
