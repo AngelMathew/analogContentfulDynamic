@@ -7,8 +7,8 @@ Using this app we can dynamically specify what components to render based on dat
 2. Map content models in Contentful to components in FE.
 3. Build components in FE to display the content.
 
-   ![Screenshot 2024-05-16 at 12 31 50 PM](https://github.com/AngelMathew/analogContentfulDynamic/assets/30999892/fbd4d206-4526-4f8f-8823-d14a487a110f)
-   ![Contentful](https://github.com/AngelMathew/analogContentfulDynamic/assets/30999892/56441482-13a0-4ace-9440-5c8b1ad6deed)
+<img width="885" alt="Screenshot 2025-03-20 at 6 50 54 PM" src="https://github.com/user-attachments/assets/c999fd8b-c90c-44e8-bfa4-9a3e208c202a" />
+<img width="746" alt="Screenshot 2025-03-20 at 6 52 42 PM" src="https://github.com/user-attachments/assets/c5ddc0d9-136b-4679-a5ff-de7fa75067f4" />
 
 
 
