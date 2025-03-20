@@ -8,7 +8,7 @@ Using this app we can dynamically specify what components to render based on dat
 3. Build components in FE to display the content.
 
 <img width="885" alt="Screenshot 2025-03-20 at 6 50 54 PM" src="https://github.com/user-attachments/assets/c999fd8b-c90c-44e8-bfa4-9a3e208c202a" />
-<img width="746" alt="Screenshot 2025-03-20 at 6 52 42 PM" src="https://github.com/user-attachments/assets/c5ddc0d9-136b-4679-a5ff-de7fa75067f4" />
+<img width="1258" alt="336164914-56441482-13a0-4ace-9440-5c8b1ad6deed" src="https://github.com/user-attachments/assets/ae973350-d5f6-4cad-a487-b75a5d519df2" />
 
 
 
